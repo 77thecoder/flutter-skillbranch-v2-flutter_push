@@ -33,11 +33,11 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFF282E3D),
+      backgroundColor: const Color(0xFF282E3D),
       body: Stack(
         children: [
           Align(
-            alignment: const Alignment(0, -0.9),
+            alignment: const Alignment(0, -0.8),
             child: Text(
               "Test your\nreaction speed",
               textAlign: TextAlign.center,
@@ -50,7 +50,7 @@ class _MyHomePageState extends State<MyHomePage> {
           Align(
             alignment: Alignment.center,
             child: ColoredBox(
-              color: Color(0xFF6D6D6D),
+              color: const Color(0xFF6D6D6D),
               child: SizedBox(
                 width: 300,
                 height: 160,
@@ -69,7 +69,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
           ),
           Align(
-            alignment: const Alignment(0, 0.9),
+            alignment: const Alignment(0, 0.8),
             child: GestureDetector(
               onTap: () => setState(() {
                 switch (gameState) {
@@ -124,11 +124,11 @@ class _MyHomePageState extends State<MyHomePage> {
   Color _getButtonColor() {
     switch (gameState) {
       case GameState.readyToStart:
-        return Color(0xFF40CA88);
+        return const Color(0xFF40CA88);
       case GameState.waiting:
-        return Color(0xFFE0982D);
+        return const Color(0xFFE0982D);
       case GameState.canBeStopped:
-        return Color(0xFFE02D47);
+        return const Color(0xFFE02D47);
     }
   }
 
